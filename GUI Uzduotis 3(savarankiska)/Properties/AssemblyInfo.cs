@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Studentai")]
+[assembly: AssemblyTitle("GUI Uzduotis 3(savarankiska)")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("Studentai")]
+[assembly: AssemblyProduct("GUI Uzduotis 3(savarankiska)")]
 [assembly: AssemblyCopyright("Copyright ©  2018")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("123e5f23-0621-4f71-a2b9-58f62a8727b1")]
+[assembly: Guid("b64a74b9-38d9-45bc-b8a4-74aead2b64e1")]
 
 // Version information for an assembly consists of the following four values:
 //

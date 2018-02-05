@@ -6,83 +6,92 @@ using System.Threading.Tasks;
 
 namespace Studentai
 {
-    class grupe // darbas su listais
+    class Grupe
     {
-        public List<Studentas> Studentai { get; set; } = new List<Studentas>(); // sudarom nauja lista 
+        // studentu sarasas / objektu sarasas / objektu rinkinys
+        // = new list... reikia, nes reikia pirmosios saraso rodykles ram'uose
+        // kitaip neis deti duomenu i sarasas
+        // List<Studentas> - sarase esanciu visu elementu tipas Studento klases, t.y.
+        // yra dedami objektai i sarasa
+        public List<Studentas> Studentai { get; set; } = new List<Studentas>();
 
-        public grupe()
+        // galima sarasas inicializuoti ir konstruktoriuje
+        // bet jei bus keli skirtingi konstruktoriai, gali buti sunku
+        // visuose juose sugaudyti butinus dalykus
+        /*public Grupe()
         {
-            Studentai.Add(new Studentas("Rokas", "Jov", 130, 20, 'v'));
-            Studentai.Add(new Studentas("Tomas", "Tom", 150, 30, 'v'));
-            Studentai.Add(new Studentas("Petras", "Jov", 180, 28, 'v'));
-            Studentai.Add(new Studentas("Kamile", "B", 132, 23, 'm'));
-            Studentai.Add(new Studentas("Giedrius", "P", 193, 67, 'v'));
+            Studentai = new List<Studentas>();
+        }*/
 
+        // tuscias grupes konstruktorius
+        public Grupe()
+        {
+            // studentai.add(kuriamas naujas studento objektas naudojant jo konstruktoriu)
+            // Studentai yra studentu sarasas, esantis grupes klaseje
+            Studentai.Add(new Studentas("Tom", "Smith", 180, 20, 'v'));
+            Studentai.Add(new Studentas("Jerry", "Jerysimo", 180, 23, 'v'));
+            Studentai.Add(new Studentas("Angela", "Mitt", 160, 21, 'm'));
+            Studentai.Add(new Studentas("William", "Smith", 175, 19, 'v'));
+            Studentai.Add(new Studentas("Jessica", "Montero", 155, 24, 'm'));
 
+            // galima kurti objekta atskirai ir tada deti i sarasa
+            // bet nebutina daryti tokiu dvieju zingsniu atskirai
+            var studentas = new Studentas("Tom", "Jerry", 30, 40, 'v');
+            Studentai.Add(studentas);
         }
 
+        // grupes klases isvedimas
         public void Isvedimas()
         {
             Console.WriteLine("Studentai");
+
+            // eina per studentu sarasas, kiekviena karta issiskirdamas
+            // atskira studenta is saraso
             foreach (var studentas in Studentai)
             {
+                // naudoja studento isvedimo metoda / isvedimo metoda
+                // esanti studento klaseje
                 studentas.Isvedimas();
             }
-            Console.WriteLine("___________________________________________________________");
+
             Console.WriteLine("Skaiciavimai");
-            Console.WriteLine();
 
             Console.WriteLine("Zemiausias studentas");
+
             var zemiausias = ZemiausiasStudentas();
             zemiausias.Isvedimas();
-            Console.WriteLine();
-        
-            Console.WriteLine("Auksciausias studentas");
-            var auksciausias = AuksciausiasStudentas();
-            zemiausias.Isvedimas();
 
-        }
-        //grupes klaseje nauji metodai:
-        //zemiausias studentas
+            //ZemiausiasStudentas().Isvedimas(); // objektas.jo_metodas
 
+        } // grupe klases isvedimo metodo pabaiga
+
+        // grupes klaseje nauji metodai:
+
+        // zemiausias studentas
+        // ras zemiausia studenta ir grazins visa rasto studento objekta
         public Studentas ZemiausiasStudentas()
         {
-            var zemiausias = Studentai[0];
+            var zemiausias = Studentai.First();
+            //dar galima: var zemiausias = Studentai[0];
 
+            // eina per studentu sarasa
             foreach (var studentas in Studentai)
             {
+                // lygina pagal tam tikras studentu SAVYBES
                 if (studentas.UgisCM < zemiausias.UgisCM)
                 {
+                    // priskiria visa OBJEKTA
                     zemiausias = studentas;
                 }
             }
 
-
+            // grazina visa objekta
             return zemiausias;
-
-
         }
-        //auksciausias studentas
-        public Studentas AuksciausiasStudentas()
-        {
-            var auksciausias = Studentai[0];
 
-            foreach (var studentas in Studentai)
-            {
-                if (studentas.UgisCM > auksciausias.UgisCM)
-                {
-                    auksciausias = studentas;
-                }
-            }
-            return auksciausias;
-
-
-            //kiek moteru
-            
-            //kiek vyru
-            //amziu vidurkis
-
-        }
-        
+        // vyriausias studentas
+        // kiek moteru
+        // kiek vyru
+        // amziu vidurkis
     }
 }

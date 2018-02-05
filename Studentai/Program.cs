@@ -10,22 +10,18 @@ namespace Studentai
     {
         static void Main(string[] args)
         {
-            
-            /*var stud1 = new Studentas("Rokas", "Jovaisa", 180, 73, 'v');
-            var stud2 = new Studentas("Rokas", "dd", 150, 33, 'v');
-            var stud3 = new Studentas("Rokaddsfs", "Jovasdfsdfisa", 120, 53, 'v');
-            var stud4 = new Studentas("Rokas", "Jovaisa", 140, 3, 'm');
+            /*var stud1 = new Studentas("saa", "asf", 170, 22, 'v');
+           var stud2 = new Studentas("gdgfh", "sgd", 150, 20, 'm');
+           var stud3 = new Studentas("qeqqr", "ddg", 165, 23, 'v');
+           var stud4 = new Studentas("cvnn", "fgfgjg", 200, 24, 'm');
+           stud1.Isvedimas();
+           stud2.Isvedimas();
+           stud3.Isvedimas();
+           stud4.Isvedimas();
+           Console.WriteLine();*/
 
-            stud1.Isvedimas();
-            stud2.Isvedimas();
-            stud3.Isvedimas();
-            stud4.Isvedimas();*/
-
-            var grupe = new grupe();
-            grupe.Isvedimas();
-
-
-
+            var grupe = new Grupe(); // grupes objektas
+            grupe.Isvedimas(); // grupes isvedimas
         }
     }
 }
