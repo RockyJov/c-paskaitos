@@ -59,6 +59,7 @@ namespace GUI_Uzduotis_3_savarankiska_
 
             var forma = new Skaiciavimai();
             forma.ShowDialog(); //parodo  Skaiciavimu langa
+          
 
         }
 

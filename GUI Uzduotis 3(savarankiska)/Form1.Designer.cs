@@ -45,7 +45,7 @@
             this.baigtiToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(930, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(434, 24);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -60,7 +60,7 @@
             // atidarytiToolStripMenuItem
             // 
             this.atidarytiToolStripMenuItem.Name = "atidarytiToolStripMenuItem";
-            this.atidarytiToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.atidarytiToolStripMenuItem.Size = new System.Drawing.Size(119, 22);
             this.atidarytiToolStripMenuItem.Text = "Atidaryti";
             this.atidarytiToolStripMenuItem.Click += new System.EventHandler(this.atidarytiToolStripMenuItem_Click);
             // 
@@ -85,14 +85,14 @@
             this.tabControl1.Location = new System.Drawing.Point(0, 24);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(930, 546);
+            this.tabControl1.Size = new System.Drawing.Size(434, 275);
             this.tabControl1.TabIndex = 2;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(930, 570);
+            this.ClientSize = new System.Drawing.Size(434, 299);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.menuStrip1);
             this.Name = "Form1";
